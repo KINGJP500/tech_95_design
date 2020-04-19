@@ -20,13 +20,11 @@
       <p class="alert"><%= alert %></p>
     
       <%= render "shared/application_nav", location: 'top' %> 
-
-      <%= login_helper %>
-
+ 
       <%= yield %>
 
       <hr>
-      <%= @copyright %>
+      <%= render "shared/application_footer" %>
 
       <%= source_helper("application") %>
     </di>
