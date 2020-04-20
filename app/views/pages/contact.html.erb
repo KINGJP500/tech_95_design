@@ -1,2 +1,58 @@
-<h1>Pages#contact</h1>
-<p>Find me in app/views/pages/contact.html.erb</p>
+<section class="form-section">
+  <div class="row">
+    <div class="col-md-6">
+      <h3> Office address</h3>
+      <p>Five Cays Sub Division, Providenciales</p>
+      <h3>Phone</h3>
+      <p><%= number_to_phone "+16492466787" %></p>
+      <h3>Email</h3>
+      <p><a href="<a href="mailto:joe@example.com?subject=feedback" "email me">Email me</a></p>
+    </div>
+    <div class="col-md-6">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3410.881258265918!2d-72.25939387779158!3d21.769052042495264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x894b493d0cdbfb0b%3A0xc7d3916ef0f57ea1!2sFive%20Cays%20Settlements%20TKCA%201ZZ%2C%20Turks%20and%20Caicos%20Islands!5e1!3m2!1sen!2s!4v1587329069901!5m2!1sen!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+
+
+
+
+
+
+<section class="success">
+  <div class="thank-you-container">
+      <div class="thank-you">
+        <div class="copy-container">
+          <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+  <g fill="none" fill-rule="evenodd">
+    <circle cx="22" cy="22" r="22" fill="#C4F0FF" fill-rule="nonzero"></circle>
+    <polyline stroke="#43458B" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" points="14 23.504 19.34 29 31 17"></polyline>
+  </g>
+</svg>
+</div>
+          <h1 class="success-headline">Thank you!</h1>
+          <h2 class="success-subhead with-email">We’ll get back to you as soon as possible <span class="email-portion">at <span class="submitted-email">justinsippel@gmail.com</span></span></h2>
+          <a class="common-Link common-Link--arrow" href="/blog">Read the latest updates from the Stripe team</a>
+        </div>
+        <hr class="divider">
+        <div class="phone-number-container">
+          <h2 class="phone-number-subhead">Prefer to set up a call with our team? Send us your number and we’ll call you as soon as possible.</h2>
+          <div class="phone-number-form-container">
+            <form class="phone-number-form" action="/contact/sales/phone" novalidate="" data-children-count="1">
+              <input type="hidden" value="" name="analytics_event_id">
+              <input type="hidden" value="" name="email">
+              <input type="hidden" value="" name="token">
+              <label class="phone-number" for="phone">Phone number</label>
+              <span class="common-FlagIcon common-FlagIcon--us"></span>
+                <span class="phone-country-code-placeholder">+1</span>
+              <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" data-kwimpalastatus="alive" data-kwimpalaid="1587325594340-5">
+              <input type="submit" class="submit-button common-Button common-Button--default" value="Add phone">
+            </form>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
