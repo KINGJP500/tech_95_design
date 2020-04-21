@@ -1,5 +1,6 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+@import "font-awesome";
 
 /* stylelint-disable selector-list-comma-newline-after */
 
@@ -108,3 +109,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
 }
 
+
+/*
+******************************************** Custom styles
+*/
+
+.social-links li{
+    font-size: 1.5em;
+ }
