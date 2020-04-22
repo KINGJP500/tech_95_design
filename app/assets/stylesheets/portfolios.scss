@@ -1,5 +1,7 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
-@import "bootstrap";
+@import "bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+
 /*body {
   /*min-height: 75rem;*/ /* Can be removed; just added for demo purposes
 }*/

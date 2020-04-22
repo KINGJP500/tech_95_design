@@ -6,10 +6,6 @@ ruby '2.7.0'
 gem 'friendly_id', '~> 5.2.4' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
 # devise for authentication
 gem 'devise', '~> 4.7', '>= 4.7.1'
-
-gem 'bootstrap', '~> 4.4.1'
-
-gem 'jquery-rails'
 gem 'petergate', '~> 2.0', '>= 2.0.1'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 gem 'kaminari', '~> 0.17.0'

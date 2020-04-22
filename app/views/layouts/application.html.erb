@@ -9,24 +9,38 @@
     <%= csp_meta_tag %>
 
     <meta name="keywords" content="<%= @seo_keywords %>" />
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
 
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all' %><!-- hh -->
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %><!-- hh -->
+  </head>
+  <div class="pos-f-t">
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="bg-dark p-4">
+        <h5 class="text-white h4">Collapsed content</h5>
+        <span class="text-muted">Toggleable via the navbar brand.</span>
+      </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+  </div>
   <body>
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
-    
-      <%= render "shared/application_nav", location: 'top' %> 
- 
+
+      <%= render "shared/application_nav", location: 'top' %>
+
       <%= yield %>
 
       <hr>
       <%= render "shared/application_footer" %>
 
       <%= source_helper("application") %>
-    </di>
+    </div>
   </body>
 </html>
