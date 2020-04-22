@@ -9,6 +9,8 @@ gem 'devise', '~> 4.7', '>= 4.7.1'
 gem 'petergate', '~> 2.0', '>= 2.0.1'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 gem 'kaminari', '~> 0.17.0'
+gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
 # Use postgresql as the database for Active Record

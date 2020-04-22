@@ -9,6 +9,7 @@
 import 'jquery'
 import $ from 'jquery';
 import('src/plugins') // note the function usage!
+import('src/html_sortable') // note the function usage!
 // ...
 
 
@@ -24,6 +25,10 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require("bootstrap")
+require ("src/blog")
+require ("src/page")
+require ("src/portfolio")
+
 
 // ....
 
