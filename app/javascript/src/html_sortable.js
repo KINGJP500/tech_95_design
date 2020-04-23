@@ -1,6 +1,5 @@
-import 'popper.js'
-import 'bootstrap'
-alert("Hey otherwise");
+import 'popper.js';
+import 'bootstrap';
 
 /*
  * HTML5Sortable package
