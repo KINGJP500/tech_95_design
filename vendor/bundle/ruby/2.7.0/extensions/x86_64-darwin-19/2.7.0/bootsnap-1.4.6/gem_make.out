@@ -1,0 +1,22 @@
+current directory: /Users/KINGJP/Devcamp/tech/Tech95Design/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.4.6/ext/bootsnap
+/usr/local/opt/ruby/bin/ruby -I /usr/local/Cellar/ruby/2.7.1_2/lib/ruby/2.7.0 -r ./siteconf20200427-68233-1h04gxa.rb extconf.rb
+creating Makefile
+
+current directory: /Users/KINGJP/Devcamp/tech/Tech95Design/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.4.6/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/KINGJP/Devcamp/tech/Tech95Design/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.4.6/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+bootsnap.c:814:7: warning: incompatible pointer types passing 'VALUE (VALUE)' (aka 'unsigned long (unsigned long)') to parameter of type 'VALUE (*)(VALUE, VALUE)' (aka 'unsigned long (*)(unsigned long, unsigned long)') [-Wincompatible-pointer-types]
+      rescue_input_to_storage, Qnil,
+      ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/Cellar/ruby/2.7.1_2/include/ruby-2.7.0/ruby/ruby.h:1988:47: note: passing argument to parameter here
+VALUE rb_rescue2(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE,VALUE),VALUE,...);
+                                              ^
+1 warning generated.
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/KINGJP/Devcamp/tech/Tech95Design/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.4.6/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20200427-68233-17r3bfc/bootsnap

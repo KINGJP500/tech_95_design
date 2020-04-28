@@ -1,45 +1,42 @@
-import 'popper.js';
-import 'bootstrap';
+var ready, set_positions;
 
 
-alert("Hey otherwise whooooooooooooo");
+set_positions = function() {
+  $('.card').each(function(i) {
+    $(this).attr('data-pos', i + 1);
+  });
+}
 
-(function() {
-  var ready, set_positions;
+ready = function() {
 
-  ready = void 0;
+  set_positions();
 
-  set_positions = void 0;
+  $('.sortable').sortable();
 
-  set_positions = function() {
-    $('.card').each(function(i) {
-      $(this).attr('data-pos', i + 1);
-    });
-  };
-
-  ready = function() {
+  $('.sortable').sortable().on('sortupdate', function(e, ui) {
+    //var updated_order;
+    updated_order = [];
     set_positions();
-    $('.sortable').sortable();
-    $('.sortable').sortable().bind('sortupdate', function(e, ui) {
-      var updated_order;
-      updated_order = [];
-      set_positions();
-      $('.card').each(function(i) {
-        updated_order.push({
-          id: $(this).data('id'),
-          position: i + 1
-        });
-      });
-      $.ajax({
-        type: 'PUT',
-        url: '/portfolios/sort',
-        data: {
-          order: updated_order
-        }
+
+    $('.card').each(function(i) {
+      updated_order.push({
+        id: $(this).data('id'),
+        position: i + 1
       });
     });
-  };
+    console.log(updated_order);
 
-  $(document).ready(ready);
+    $.ajax({
+      type: 'PUT',
+      url: '/portfolios/sort',
+      data: {
+        order: updated_order
+      }
+    });
+  });
+};
 
-}).call(this);
+$(document).ready(ready);
+
+//if using turbolinks
+$(document).on('page:load', ready);

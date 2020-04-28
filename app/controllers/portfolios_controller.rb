@@ -11,14 +11,14 @@ class PortfoliosController < ApplicationController
   def sort
     params[:order].each do |key, value|
       Portfolio.find(value[:id]).update(position: value[:position])
-    end 
+    end
 
-  render nothing: true
+  #render nothing: true
   end
 
   def angular
     @angular_portfolio_items = Portfolio.angular
-  end 
+  end
 
   def new
     @portfolio_item = Portfolio.new
@@ -37,12 +37,12 @@ class PortfoliosController < ApplicationController
     end
   end
 
-  def edit 
-  end 
+  def edit
+  end
   def update
 
     respond_to do |format|
-      if @portfolio_item.update(portfolio_params) 
+      if @portfolio_item.update(portfolio_params)
         format.html { redirect_to portfolios_path, notice: 'Blog was successfully updated.' }
       else
         format.html { render :edit }
@@ -51,25 +51,25 @@ class PortfoliosController < ApplicationController
   end
 
   def show
-  end 
+  end
 
 
-  def destroy 
+  def destroy
     @portfolio_item.destroy
     respond_to do |format|
       format.html {redirect_to portfolios_url, notice: 'Post was removed.'}
     end
-  end 
+  end
 
   private
 
   def portfolio_params
-    params.require(:portfolio).permit(:title, 
-                                      :subtitle, 
-                                      :body, 
+    params.require(:portfolio).permit(:title,
+                                      :subtitle,
+                                      :body,
                                       technologies_attributes: [:name]
                                      )
-  end 
+  end
 
   def set_portfolio_item
     @portfolio_item = Portfolio.find(params[:id])

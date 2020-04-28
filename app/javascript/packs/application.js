@@ -6,35 +6,34 @@
 //import { definitionsFromContext } from "stimulus/webpack-helpers"
 
 // ...
-import 'jquery'
-import $ from 'jquery';
+const $ = require('jquery');
+//...
+global.$ = $
+global.jQuery = $
+
+require("@rails/ujs").start()
+require("jquery")
+require("jquery-ui")
+require("bootstrap")// the real links
+require('src/html.sortable')
+
+require("turbolinks").start()
+require("@rails/activestorage").start()
+//require("bootstrap-sprockets")
+require("channels")
+
+//the javascript files
 import ('src/blog')
 import ('src/page')
 import('src/portfolio')
 import('src/plugins') // note the function usage!
-import('src/html_sortable') // note the function usage!
 // ...
 
+//import 'core-js/stable'
+//import 'regenerator-runtime/runtime'
 
-//= require jquery-ui/widget
-//= require jquery-ui/sortable
 
-import 'core-js/stable'
-import 'regenerator-runtime/runtime'
-
-import 'bootstrap/dist/js/bootstrap';
-import 'bootstrap';
 import "../stylesheets/application" // <- Add this line
-
-
-require("@rails/ujs").start()
-require("turbolinks").start()
-require("@rails/activestorage").start()
-require("channels")
-require("bootstrap")
-require("jquery")
-require("jquery-ui/ui/widget")
-require("jquery-ui/ui/widgets/sortable")
 
 
 // ....
