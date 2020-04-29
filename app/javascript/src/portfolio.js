@@ -13,7 +13,7 @@ ready = function() {
 
   $('.sortable').sortable();
 
-  $('.sortable').sortable().on('sortupdate', function(e, ui) {
+  $('.sortable').sortable().bind('sortupdate', function(e, ui) {
     //var updated_order;
     updated_order = [];
     set_positions();
