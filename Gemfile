@@ -11,6 +11,12 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 gem 'kaminari', '~> 0.17.0'
 #gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
 gem 'acts_as_list', '~> 1.0', '>= 1.0.1'
+# videos uploaders gems
+gem 'carrierwave', '~> 2.1'
+gem 'carrierwave-aws', '~> 1.5'
+gem 'mini_magick', '~> 4.10', '>= 4.10.1'
+gem 'dotenv-rails', '~> 2.7', '>= 2.7.5'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
