@@ -4,7 +4,7 @@
 // that code so it'll be compiled.
 //import { Application } from "stimulus"
 //import { definitionsFromContext } from "stimulus/webpack-helpers"
-
+import 'cocoon';
 // ...
 const $ = require('jquery');
 //...

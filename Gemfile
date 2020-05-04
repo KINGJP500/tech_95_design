@@ -16,7 +16,7 @@ gem 'carrierwave', '~> 2.1'
 gem 'carrierwave-aws', '~> 1.5'
 gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 gem 'dotenv-rails', '~> 2.7', '>= 2.7.5'
-
+gem 'cocoon', '~> 1.2', '>= 1.2.14'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
