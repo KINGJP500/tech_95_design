@@ -15,8 +15,6 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <!-- start of nav -->
     <%= render 'shared/blog_nav' %>
     <!-- end of nav -->
@@ -24,6 +22,7 @@
     <!-- start of container and row element -->
     <main role="main" class="container">
       <div class="row">
+        <%= custom_bootstrap_flash %>
         <%= yield %>
 
         <%= render 'shared/blog_sidebar'%>

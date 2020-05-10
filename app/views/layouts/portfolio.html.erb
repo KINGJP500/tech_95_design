@@ -19,6 +19,7 @@
     <%= render 'shared/portfolio_nav' %>
     <!-- end of header -->
     <%= render 'shared/portfolio_masthead' unless logged_in?(:site_admin) %>
+    <%= custom_bootstrap_flash %>
 
     <%= yield %>
 

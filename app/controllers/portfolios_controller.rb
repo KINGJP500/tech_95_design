@@ -1,8 +1,9 @@
 class PortfoliosController < ApplicationController
   before_action :set_portfolio_item, only: [:edit, :update, :show, :destroy]
-
   layout 'portfolio'
   access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit, :sort]}, site_admin: :all
+  add_flash_types :success, :danger, :info
+
 
   def index
     @portfolio_items = Portfolio.by_position
@@ -12,7 +13,7 @@ class PortfoliosController < ApplicationController
     params[:order].each do |key, value|
       Portfolio.find(value[:id]).update(position: value[:position])
     end
-    render :nothing => true 
+    render :nothing => true
   end
 
   def angular
@@ -27,7 +28,7 @@ class PortfoliosController < ApplicationController
     @portfolio_item = Portfolio.new(portfolio_params)
     respond_to do |format|
       if @portfolio_item.save
-        format.html { redirect_to portfolios_path, notice: 'Your post is now live.' }
+        format.html { redirect_to portfolios_path, success: 'Your post is now live.' }
       else
         format.html { render :new }
       end
@@ -40,7 +41,7 @@ class PortfoliosController < ApplicationController
 
     respond_to do |format|
       if @portfolio_item.update(portfolio_params)
-        format.html { redirect_to portfolios_path, notice: 'Blog was successfully updated.' }
+        format.html { redirect_to portfolios_path, info: 'Blog was successfully updated.' }
       else
         format.html { render :edit }
       end
@@ -54,7 +55,7 @@ class PortfoliosController < ApplicationController
   def destroy
     @portfolio_item.destroy
     respond_to do |format|
-      format.html {redirect_to portfolios_url, notice: 'Post was removed.'}
+      format.html {redirect_to portfolios_url, danger: 'Post was removed.'}
     end
   end
 

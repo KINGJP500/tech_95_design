@@ -14,9 +14,9 @@ global.jQuery = $
 require("@rails/ujs").start()
 require("jquery")
 require("jquery-ui")
+global.toastr = require("toastr")
 require("bootstrap")// the real links
 require('src/html.sortable')
-
 require("turbolinks").start()
 require("@rails/activestorage").start()
 //require("bootstrap-sprockets")
@@ -35,6 +35,7 @@ import('src/plugins') // note the function usage!
 
 import "../stylesheets/application" // <- Add this line
 
+$('.alert').alert()
 
 // ....
 
