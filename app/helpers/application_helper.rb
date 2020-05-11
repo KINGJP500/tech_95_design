@@ -37,6 +37,10 @@ module ApplicationHelper
       {
         url: portfolios_path,
         title: 'Portfolio'
+      },
+      {
+        url: tech_news_path,
+        title: 'Tech News'
       }
     ]
   end
@@ -54,7 +58,7 @@ module ApplicationHelper
   def active? path
     "active" if current_page? path
   end
-  
+
   def custom_bootstrap_flash
     flash_messages = []
     flash.each do |type, message|
@@ -64,6 +68,6 @@ module ApplicationHelper
       flash_messages << text.html_safe if message
     end
     flash_messages.join("\n").html_safe
-  end 
+  end
 
 end

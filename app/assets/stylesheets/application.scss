@@ -82,9 +82,17 @@ body {
 @media (min-width: 48em) {
   .masthead-brand {
     float: left;
+    color: white;
   }
   .nav-masthead {
     float: right;
+  }
+}
+@media (min-width: 62em) {
+  .masthead,
+  .mastfoot,
+  .cover-container{
+    width: 60rem;
   }
 }
 
