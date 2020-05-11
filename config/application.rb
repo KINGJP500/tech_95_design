@@ -31,5 +31,6 @@ module Tech95Design
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.eager_load_paths << "#{Rails.root}/lib"
   end
 end
