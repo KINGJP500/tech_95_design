@@ -8,7 +8,7 @@ gem 'friendly_id', '~> 5.2.4' # Note: You MUST use 5.0.0 or greater for Rails 4.
 gem 'devise', '~> 4.7', '>= 4.7.1'
 gem 'petergate', '~> 2.0', '>= 2.0.1'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
-gem 'kaminari', '~> 0.17.0'
+gem 'kaminari', '~> 1.2.1'
 #gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
 gem 'acts_as_list', '~> 1.0', '>= 1.0.1'
 # videos uploaders gems
